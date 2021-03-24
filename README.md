@@ -1,1 +1,1 @@
-# 1host-next
+# 1host-next - _The next version of 1host_
