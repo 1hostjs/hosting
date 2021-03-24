@@ -16,7 +16,7 @@
   },
   "scripts": {
     "start": "1host",
-    "lint": "prettier --write \"**/*.js\""
+    "lint": "prettier --write \"**/*.**\""
   },
   "devDependencies": {
     "prettier": "^2.2.1"
