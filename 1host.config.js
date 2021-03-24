@@ -4,4 +4,5 @@ module.exports = {
       module: require("./test.js"),
     },
   ],
+  port: 3000
 };
