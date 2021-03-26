@@ -4,9 +4,6 @@ module.exports = {
       module: require("./test.js"),
     },
     {
-      module: require("./tailwind.js"),
-    },
-    {
         module: require('./errors.js'),
         errorHandler: true
     }

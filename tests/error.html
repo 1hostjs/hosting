@@ -1,11 +1,4 @@
-module.exports = (req, res) => {
-  console.log(req.url);
-  const fs = require("fs");
-  if (req.url === "/") {
-    res.add(fs.readFileSync("./index.html", 'utf8'));
-  }else{
-    res.statusCode = 404
-    res.start(`<!doctype html>
+<!doctype html>
 <html>
   <head>
     <style>
@@ -22,6 +15,7 @@ module.exports = (req, res) => {
       }
     }
     </style>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"></head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -62,7 +56,7 @@ module.exports = (req, res) => {
               <div class="py-2">
         <h1 class="font-bold text-3xl md:text-4xl max-w-xl leading-tight">Information</h1>
         <div>© Copyright 2021 William Horning and Contributors. All Rights Reserved.</div>
-        <div><a href="https://github.com/1hostjs/hosting>GitHub</a></div>
+        <div><a href="https://github.com/1hostjs/hosting">GitHub</a></div>
         <div>Page requested at
           <%-timestamp%>
         </div>
@@ -76,6 +70,4 @@ module.exports = (req, res) => {
       </div>
     </div>
   </body>
-</html>`, {}, 'html')
-  }
-};
+</html>

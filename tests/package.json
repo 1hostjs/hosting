@@ -1,0 +1,18 @@
+{
+  "name": "1host-tests",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/1hostjs/1host-next.git",
+  "author": "1hostjs Contributors",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6"
+  },
+  "scripts": {
+    "start": "1host",
+    "lint": "prettier --write \"**/*.**\""
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
