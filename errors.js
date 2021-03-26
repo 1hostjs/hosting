@@ -1,11 +1,6 @@
-module.exports = (req, res) => {
-  console.log(req.url);
-  const fs = require("fs");
-  if (req.url === "/") {
-    res.add(fs.readFileSync("./index.html", 'utf8'));
-  }else{
-    res.statusCode = 404
-    res.start(`<!doctype html>
+module.exports = (req, res,code) => {
+      res.statusCode = code
+    res.add(`<!doctype html>
 <html>
   <head>
     <style>
@@ -76,6 +71,6 @@ module.exports = (req, res) => {
       </div>
     </div>
   </body>
-</html>`, {}, 'html')
+</html>`)
   }
-};
+

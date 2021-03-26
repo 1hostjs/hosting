@@ -8,16 +8,28 @@ module.exports = (modules, port) => {
       res.setHeader("X-Powered-By", "1hostjs"); // this is for credit
       let content = "";
       let config = [];
-      res.add = (newContent, newConfig) => {
+      let type = '';
+      res.add = (newContent) => {
         content = newContent;
-        config.push(newConfig);
       };
+      res.start = (newContent, newConfig, newType = 'html') => {
+        content = '';
+        content = newContent
+        config.push(newConfig);
+        let type = newType
+      };
+
       res.content = () => {
         return content;
       };
+      res.type = () => {
+        return type;
+      };
+
       for (module of modules) {
         module.module(req, res);
       }
+      if (content == '') modules.errorHandler.module(req,res,404)
       res.write(content);
       res.end();
     })

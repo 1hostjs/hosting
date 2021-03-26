@@ -3,9 +3,11 @@ module.exports = (dir) => {
   let modules = [];
   for (module of config.modules) {
     if (typeof module.module == "function") {
-      modules.push({ module: module.module, data: module });
+    if (!module.errorHandler) modules.push({ module: module.module, data: module });
+    else modules.errorHandler = { module: module.module, data: module };
     } else if (typeof module.module == "string") {
-      modules.push({ module: require(module.module), data: module });
+      if (!module.errorHandler) modules.push({ module: require(module.module), data: module });
+      else modules.errorHandler = { module: require(module.module), data: module };
     }
   }
   require("./serve")(modules, config.port);
