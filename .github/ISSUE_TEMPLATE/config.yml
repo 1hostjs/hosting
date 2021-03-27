@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/1hostjs/hosting/discussions
+    about: Discuss on our GitHub Discussions (our own forums)
+  - name: 💬 Post a Discussion
+    url: https://github.com/1hostjs/hosting/discussions/new
+    about: Create a new Discussion post
+  - name: Look at our website!
+    url: https://1host.js.org/
+    about: Check our documentation and more.
