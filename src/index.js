@@ -7,7 +7,7 @@ const localeee = osLocale.sync();
 const localee = localeee.split('-');
 const locale = localee[0]
 try {
-  console.log(formatting.successBox(l10n('starting.starting',locale)));
+  console.log(formatting.successBox(l10n('starting',locale)));
   //o.err()
   importmodules(process.cwd());
 } catch (err) {
