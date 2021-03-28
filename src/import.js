@@ -1,5 +1,6 @@
 module.exports = (dir) => {
-  const config = require(dir + "/1host.config.js");
+  const path = require("path");
+  const config = require(path.join(dir,"1host.config.js"));
   let modules = [];
   for (module of config.modules) {
     if (typeof module.module == "function") {
