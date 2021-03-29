@@ -15,5 +15,5 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: "This is a issue PR. If there isn't any activity this issue may be closed. Thanks for contributing to 1host.js"
         stale-pr-message: "This is a stale PR. If there isn't any activity this issue may be closed. Thanks for contributing to 1host.js"
-        stale-issue-label: '' # todo: update this
-        stale-pr-label: '' # todo: update this
+        stale-issue-label: "status: stale" # todo: update this
+        stale-pr-label: "status: stale" # todo: update this
