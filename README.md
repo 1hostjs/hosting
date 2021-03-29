@@ -1,4 +1,4 @@
-# ⚠️ This repository is a beta and under constant change. Use at your own risk.
+# ⚠️ This repository is a beta and under constant change. Use at your own risk. We are ***NOT RESPONSIBLE*** for any damages caused.
 ## 1host-next - _The next version of 1host_
 ### Get started
 Install 1host
