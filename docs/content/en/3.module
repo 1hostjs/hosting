@@ -9,7 +9,7 @@ category: "Usage"
 - Add the following code:
 
 ```javascript
-module.exports = async (req, res,code) => {
+module.exports = async (req, res) => {
   // your code here
 }
 ```
