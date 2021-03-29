@@ -1,8 +1,8 @@
 ---
-name: 👨‍💻 Dev Facing
+name: 👨‍💻 Developer Facing
 about: Stuff that affects developers
-title: ''
-labels: 'type: enhancement, type: dev facing'
+title: '[Developer Facing]'
+labels: 'type: developer facing'
 assignees: ''
 ---
 **What would this change?**
