@@ -9,9 +9,9 @@ category: "Usage"
 - Add the following code:
 
 ```javascript
-module.exports = async (req, res,code) => {
+module.exports = async (req, res, code) => {
   // your code here
-}
+};
 ```
 
 - In the blank space add your own [http module](https://nodejs.dev/learn/the-nodejs-http-module) code, note that you must use res.start to start to send stuff.
