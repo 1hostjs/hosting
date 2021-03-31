@@ -1,7 +1,6 @@
-const { resolveSoa } = require("dns");
-
 module.exports = (modules, port) => {
   const http = require("http");
+  const fs = require("fs");
   console.log("Serving");
 
   http
@@ -21,7 +20,9 @@ module.exports = (modules, port) => {
 
         type = newType;
       };
-
+      res.startFile = (path) => {
+        res.start(fs.readFileSync(path))
+      };
       res.content = () => {
         return content;
       };
