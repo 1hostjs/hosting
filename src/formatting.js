@@ -1,6 +1,11 @@
 const wrapAnsi = require("wrap-ansi");
 const chalk = require("chalk");
 const boxen = require("boxen");
+const l10n = require("../localization/getstring");
+const osLocale = require("os-locale");
+const localeee = osLocale.sync();
+const localee = localeee.split("-");
+const locale = localee[0];
 const maxCharsPerLine = () => ((process.stdout.columns || 100) * 80) / 100;
 
 function indent(count, chr = " ") {
@@ -42,7 +47,7 @@ function box(message, title, options) {
   return (
     boxen(
       [
-        title || chalk.white("1host.js Message"),
+        title || chalk.white(l10n("message", locale)),
         "",
         chalk.white(foldLines(message, 0, 0, maxCharsPerLine())),
       ].join("\n"),
@@ -60,24 +65,24 @@ function box(message, title, options) {
 }
 
 function successBox(message, title) {
-  return box(message, title || chalk.green("✔ 1host.js Success"), {
+  return box(message, title || chalk.green(l10n("success", locale)), {
     borderColor: "green",
   });
 }
 
 function warningBox(message, title) {
-  return box(message, title || chalk.yellow("⚠ 1host.js Warning"), {
+  return box(message, title || chalk.yellow(l10n("warning", locale)), {
     borderColor: "yellow",
   });
 }
 
 function errorBox(message, title) {
-  return box(message, title || chalk.red("✖ 1host.js Error"), {
+  return box(message, title || chalk.red(l10n("error", locale)), {
     borderColor: "red",
   });
 }
 
 function fatalBox(message, title) {
-  return errorBox(message, title || chalk.red("✖ 1host.js Fatal Error"));
+  return errorBox(message, title || chalk.red(l10n("fatalerror", locale)));
 }
 module.exports = { fatalBox, successBox };

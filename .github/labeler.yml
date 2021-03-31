@@ -1,0 +1,14 @@
+"scope: documentation":
+- /docs/*
+"scope: L10N:
+- /localization/*
+"scope: contributors":
+- /.github/CODEOWNERS
+- /.all-contributorsrc
+"scope: dependencies":
+- /package.json
+- /package-lock.json
+- /docs/package.json
+- /docs/yarn.lock
+"scope: core":
+- /src/*
