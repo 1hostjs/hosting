@@ -1,0 +1,16 @@
+{
+  "name": "@1host.js/docs",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "docus": "^0.1.5",
+    "nuxt": "^2.15.3",
+    "postcss": "8",
+    "tailwindcss": "^2.0.4"
+  }
+}

@@ -5,7 +5,7 @@ Install 1host
 npm install @1hostjs/hosting
 ```
 Add 1host by adding a new script in package.json
-```diff
+```diff-json
 "scripts": {
 + "start": "1host"
 - "start": "node ."
