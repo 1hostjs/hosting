@@ -1,5 +1,5 @@
 "scope: documentation":
-- /docs/*
+- any: ['docs/**']
 "scope: L10N":
 - /localization/*
 "scope: contributors":
