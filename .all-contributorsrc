@@ -20,6 +20,19 @@
         "maintenance",
         "review"
       ]
+    },
+    {
+      "login": "thecoder876",
+      "name": "thecoder876",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76265544?v=4",
+      "profile": "https://thecoder876.github.io",
+      "contributions": [
+        "code",
+        "ideas",
+        "maintenance",
+        "projectManagement",
+        "review"
+      ]
     }
   ],
   "contributorsPerLine": 7,
