@@ -6,6 +6,22 @@
   "commit": false,
   "contributors": [
     {
+      "login: "wgyt",
+      "name": "William Horning",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68466727?v=4",
+      "profile": "https://www.wgyt.tk",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "infra",
+        "maintenance",
+        "review"
+      ]
+    },
+    {
       "login": "retronbv",
       "name": "retronbv",
       "avatar_url": "https://avatars.githubusercontent.com/u/49005044?v=4",
