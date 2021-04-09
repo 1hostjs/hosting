@@ -1,0 +1,14 @@
+name: Push strings to transifex
+on:
+  push:
+jobs:
+  push_strings:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.5
+      - run: npm install
+      - run: npm run trans
+        env:
+          TRANSIFEX_SECRET: ${{secrets.TRANSIFEX_SECRET}}
+          TRANSIFEX_TOKEN: 1/c885c73e0f89b3c7910d866455dbf5809465ca8e
