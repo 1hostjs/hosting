@@ -1,0 +1,31 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "retronbv",
+      "name": "retronbv",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49005044?v=4",
+      "profile": "https://retronbv.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "infra",
+        "maintenance",
+        "review"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "hosting",
+  "projectOwner": "1hostjs",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
