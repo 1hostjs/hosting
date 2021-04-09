@@ -10,6 +10,10 @@ try {
   importmodules(process.cwd());
 } catch (err) {
   console.clear();
-  console.log(formatting.fatalBox(l10n("Yikes, we ran into an error running your project\n", locale)));
+  console.log(
+    formatting.fatalBox(
+      l10n("Yikes, we ran into an error running your project\n", locale)
+    )
+  );
   consola.error(err);
 }
