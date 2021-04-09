@@ -10,6 +10,10 @@
       "name": "William Horning",
       "avatar_url": "https://avatars.githubusercontent.com/u/68466727?v=4",
       "profile": "http://wgyt.tk",
+      "login: "wgyt",
+      "name": "William Horning",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68466727?v=4",
+      "profile": "https://www.wgyt.tk",
       "contributions": [
         "bug",
         "code",
@@ -18,6 +22,35 @@
         "ideas",
         "infra",
         "maintenance",
+        "review"
+      ]
+    },
+    {
+      "login": "retronbv",
+      "name": "retronbv",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49005044?v=4",
+      "profile": "https://retronbv.github.io",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "design",
+        "ideas",
+        "infra",
+        "maintenance",
+        "review"
+      ]
+    },
+    {
+      "login": "thecoder876",
+      "name": "thecoder876",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76265544?v=4",
+      "profile": "https://thecoder876.github.io",
+      "contributions": [
+        "code",
+        "ideas",
+        "maintenance",
+        "projectManagement",
         "review"
       ]
     }
