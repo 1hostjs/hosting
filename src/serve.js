@@ -1,9 +1,10 @@
+const consola = require('consola')
 module.exports = (modules, port) => {
   const http = require("http");
   const fs = require("fs");
   console.log("Serving");
-
-  http
+  function start(usePort = port) {
+    http
     .createServer(function (req, res) {
       const host = req.headers.host; // this is the host
       res.setHeader("X-Powered-By", "1hostjs"); // this is for credit
@@ -45,5 +46,16 @@ module.exports = (modules, port) => {
       }
     })
 
-    .listen(port);
+    .listen(usePort);
+
+  }
+  try {
+    start()
+  } catch (err) {
+    if (err.code == "EADDRINUSE") {
+      start(0);
+    } else {
+      throw err;
+    }
+  }
 };

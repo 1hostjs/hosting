@@ -18,7 +18,6 @@
     "1host": "bin/1host.js"
   },
   "scripts": {
-    "start": "1host",
     "lint": "prettier --write \"**/*.**\"",
     "trans": "txjs-cli push --purge \"localization/strings.en.js\""
   },
