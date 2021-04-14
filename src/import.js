@@ -14,5 +14,5 @@ module.exports = (dir) => {
         modules.errorHandler = { module: require(module.module), data: module };
     }
   }
-  require("./serve")(modules, config.port);
+  return [modules, config.port];
 };

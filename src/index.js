@@ -1,13 +1,12 @@
 const formatting = require("./formatting");
 const consola = require("consola");
-const importmodules = require("./import");
 const l10n = require("../localization/getstring");
-const osLocale = require("os-locale");
-const locale = osLocale.sync();
+const locale = require("os-locale").sync();
 try {
   console.log(formatting.successBox(l10n("Starting...", locale)));
   //o.err()
-  importmodules(process.cwd());
+  importdata = require("./import")(process.cwd());
+  require("./serve")(importdata[0], importdata[1]);
 } catch (err) {
   console.clear();
   console.log(
