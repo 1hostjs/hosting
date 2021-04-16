@@ -1,4 +1,4 @@
-import transifex from '@transifex/native';
+import transifex from "@transifex/native";
 const { tx, t } = transifex;
 export default (key, locale) => {
   tx.init({
