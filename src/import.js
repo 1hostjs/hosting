@@ -1,10 +1,10 @@
 export default (dir) => {
-    if (process.platform === "win32") {
-      var e = "\\";
-    } else {
-      var e = "/";
-    }
-  const moduleloc = dir + e + "1host.config.js"
+  if (process.platform === "win32") {
+    var e = "\\";
+  } else {
+    var e = "/";
+  }
+  const moduleloc = dir + e + "1host.config.js";
   return import(moduleloc).then((config) => {
     var modules = [];
     for (module of config.default.modules) {
@@ -16,9 +16,12 @@ export default (dir) => {
         if (!module.errorHandler)
           modules.push({ module: require(module.module), data: module });
         else
-          modules.errorHandler = { module: require(module.module), data: module };
+          modules.errorHandler = {
+            module: require(module.module),
+            data: module,
+          };
       }
     }
     return [modules, config.default.port];
-  })
+  });
 };
