@@ -1,4 +1,6 @@
 export default (modules, port) => {
+  global.modules = modules;
+  global.port = port;
   import("http").then((http) => {
     import("fs").then((fs) => {
       console.log("Serving");
