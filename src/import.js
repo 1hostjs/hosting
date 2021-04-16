@@ -1,9 +1,14 @@
-import path from 'path';
 export default (dir) => {
-  let cfng = path.join(dir,"1host.config.js");
-  import cfng from cfng;
+  sep = ()=>{
+    if(process.platform === "win32"){
+      return "\\"
+    }else{
+      return "/"
+    }
+  }
+  import(dir+sep+"1host.config.js").then((module) => { global.config = module });
   let modules = [];
-  for (module of cfng.modules) {
+  for (module of config.modules) {
     if (typeof module.module == "function") {
       if (!module.errorHandler)
         modules.push({ module: module.module, data: module });
@@ -15,5 +20,5 @@ export default (dir) => {
         modules.errorHandler = { module: require(module.module), data: module };
     }
   }
-  return [modules, cfng.port]
+  return [modules, config.port]
 };

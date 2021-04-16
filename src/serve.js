@@ -1,5 +1,5 @@
 export default (modules, port) => {
-  import http from "http";
+  import http from 'http';
   import fs from "fs";
   console.log("Serving");
   function start(usePort) {
@@ -64,7 +64,7 @@ export default (modules, port) => {
       .listen(usePort);
   }
   try {
-    start();
+    start(port);
   } catch (err) {
     if (err.code == "EADDRINUSE") {
       start(0);
