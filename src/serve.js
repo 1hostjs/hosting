@@ -39,8 +39,8 @@ module.exports = (moduless, port) => {
           res.write(content);
 
           res.end();
-        } catch(err) {
-          console.error(err)
+        } catch (err) {
+          console.error(err);
           moduless.errorHandler.module(req, res, 500);
           res.write(content);
         }

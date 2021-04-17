@@ -27,5 +27,5 @@ export default (dir) => {
     moduless = modules;
     portss = config.default.port;
   });
-  return [moduless, portss]
+  return [moduless, portss];
 };
