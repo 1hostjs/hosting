@@ -5,7 +5,9 @@ export default (dir) => {
     var e = "/";
   }
   const moduleloc = dir + e + "1host.config.js";
-  return import(moduleloc).then((config) => {
+  var moduless;
+  var portss;
+  import(moduleloc).then((config) => {
     var modules = [];
     var i = 0;
     for (i of config.default.modules) {
@@ -16,12 +18,14 @@ export default (dir) => {
         if (!i.errorHandler)
           modules.push({ module: require(i.module), data: i });
         else
-          modules.default.errorHandler = {
+          modules.errorHandler = {
             module: require(i.module),
             data: i,
           };
       }
     }
-    return [modules, config.default.port];
+    moduless = modules;
+    portss = config.default.port;
   });
+  return [moduless, portss]
 };

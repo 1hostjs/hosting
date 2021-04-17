@@ -5,7 +5,6 @@
   "repository": "https://github.com/1hostjs/1host-next.git",
   "author": "wgyt",
   "license": "MIT",
-  "type": "module",
   "dependencies": {
     "@transifex/native": "^0.11.2",
     "boxen": "^5.0.1",
@@ -15,7 +14,7 @@
     "wrap-ansi": "^7.0.0"
   },
   "bin": {
-    "1host": "bin/1host.js"
+    "1host": "bin/1host.mjs"
   },
   "scripts": {
     "lint": "prettier --write \"**/*.**\"",

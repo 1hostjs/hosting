@@ -1,7 +1,7 @@
 import wrapAnsi from "wrap-ansi";
 import chalk from "chalk";
 import boxen from "boxen";
-import l10n from "../localization/getstring.js";
+import l10n from "../localization/getstring.mjs";
 import { sync } from "os-locale";
 const locale = sync();
 const maxCharsPerLine = () => ((process.stdout.columns || 100) * 80) / 100;
