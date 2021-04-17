@@ -9,7 +9,7 @@ const locale = osloc.sync();
 try {
   console.log(successBox(l10n("Starting...", locale)));
   //o.err()
-  var data = importmodules(process.cwd(),successBox, fatalBox,l10n,locale);
+  var data = importmodules(process.cwd(), successBox, fatalBox, l10n, locale);
   serve(data[0], data[1]);
 } catch (err) {
   console.clear();
