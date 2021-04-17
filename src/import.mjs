@@ -5,8 +5,6 @@ export default (dir, successBox, fatalBox, l10n, locale) => {
     var e = "/";
   }
   const moduleloc = dir + e + "1host.config.js";
-  var moduless;
-  var portss;
   return import(moduleloc)
     .then((config) => {
       var modules = [];
