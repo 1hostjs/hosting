@@ -2,7 +2,7 @@ import formatting from "../src/formatting.mjs";
 import l10n from "../localization/getstring.mjs";
 import osLocale from "os-locale";
 const locale = osLocale.sync();
-var title = l10n("1host.js Help", locale) || "1host.js Help";
+var title = l10n("1host.js Help", locale);
 console.log(
   formatting.successBox(
     l10n(

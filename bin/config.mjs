@@ -5,7 +5,7 @@ import osloc from "os-locale";
 import path from "path";
 import fs from "fs";
 const locale = osloc.sync();
-var title = l10n("1host.js Config", locale) || "1host.js Config";
+var title = l10n("1host.js Config", locale);
 var portt;
 var modules = [];
 console.log(
@@ -15,20 +15,20 @@ const readline = { createInterface }.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
-readline.question("Choose a port number:", (port) => {
+readline.question(l10n("Choose a port number:",locale), (port) => {
   portt = port;
   function e() {
-    readline.question("Do you want to add a module(y/n):", (yn) => {
+    readline.question(l10n("Do you want to add a module(y/n):",locale), (yn) => {
       if (yn === "y") {
         var cfgmdle = {};
-        readline.question("Path to the module", (str) => {
+        readline.question(l10n("Path to the module",locale), (str) => {
           cfgmdle.module = str;
-          readline.question("Is it an error handler? (y/n):", (yn) => {
+          readline.question(l10n("Is it an error handler? (y/n):",locale), (yn) => {
             if (yn === "y") {
               cfgmdle.errorHandler = true;
             }
             modules.push(cfgmdle);
-            readline.question("Do you want do add another(y/n):", (yn) => {
+            readline.question(l10n("Do you want do add another(y/n):",locale), (yn) => {
               if (yn === "y") {
                 e();
               } else {
