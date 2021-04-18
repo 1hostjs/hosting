@@ -37,7 +37,7 @@ readline.question("Choose a port number:", (port) => {
             });
           });
         });
-      }else{
+      } else {
         readline.close();
       }
     });
