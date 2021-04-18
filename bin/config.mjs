@@ -7,6 +7,7 @@ import fs from "fs";
 const locale = osloc.sync();
 var title = l10n("1host.js Config", locale) || "1host.js Config";
 var config = {};
+config.modules = [];
 console.log(
   formatting.successBox(l10n("Answer the prompts below", locale), title)
 );
@@ -16,19 +17,29 @@ const readline = { createInterface }.createInterface({
 });
 readline.question("Choose a port number:", (port) => {
   config.port = port;
-  console.log(config);
   function e() {
     readline.question("Do you want to add a module(y/n):", (yn) => {
       if (yn === "y") {
-        // todo: add code here
+        var cfgmdle = {};
+        readline.question("Path to the module", (str) => {
+          cfgmdle.module = str;
+          readline.question("Is it an error handler? (y/n):", (yn) => {
+            if (yn === "y") {
+              cfgmdle.errorHandler = true;
+            }
+            config.modules.push(cfgmdle);
+            readline.question("Do you want do add another(y/n):", (yn) => {
+              if (yn === "y") {
+                e();
+              } else {
+                readline.close();
+              }
+            });
+          });
+        });
+      }else{
+        readline.close();
       }
-      readline.question("Do you want do add another(y/n):", (yn) => {
-        if (yn === "y") {
-          e();
-        } else {
-          readline.close();
-        }
-      });
     });
   }
   e();
