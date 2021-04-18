@@ -1,5 +1,5 @@
 const ejs = require("ejs");
-module.exports = async (req, res, code) => {
+module.exports = async (req, res, code, err) => {
   res.statusCode = code;
   var datanum = code;
   var dataver = "v2";
@@ -8,14 +8,14 @@ module.exports = async (req, res, code) => {
     timeZone: "America/New_York",
   });
 
-  res.start(
+  res.end(
     await ejs.renderFile("./error.ejs", {
       errornumber: code,
       datanum: datanum,
-      url: `https://${req.host}${req.url}`,
-      host: req.host || "1host.js selfhosted",
+      host: "1host.js selfhosted",
       timestamp: datadate,
       version: dataver,
+      err:err,
     })
   );
 };

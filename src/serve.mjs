@@ -22,7 +22,7 @@ export default (mdls, port) => {
           type = newType;
         };
         res.startFile = (path) => {
-          res.start(fs.readFileSync(path));
+          res.start(fs.readFileSync(path),{});
         };
         res.content = () => {
           return content;
@@ -39,9 +39,8 @@ export default (mdls, port) => {
           res.setHeader("Content-Type", type);
           res.write(content);
           res.end();
-        } catch {
-          modules.errorHandler.module(req, res, 500);
-          res.write(content);
+        } catch(err) {
+          modules.errorHandler.module(req, res, 500, err);
         }
       })
       .listen(usePort);
