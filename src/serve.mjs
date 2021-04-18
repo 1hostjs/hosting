@@ -31,7 +31,7 @@ export default (mdls, port) => {
           return type;
         };
         try {
-          let module
+          let module;
           for (module of modules) {
             module.module(req, res);
           }
