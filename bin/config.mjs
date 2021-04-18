@@ -6,7 +6,7 @@ import path from "path";
 import fs from "fs";
 const locale = osloc.sync();
 var title = l10n("1host.js Config", locale) || "1host.js Config";
-var config = {};
+var portt
 var modules = [];
 console.log(
   formatting.successBox(l10n("Answer the prompts below", locale), title)
@@ -16,7 +16,7 @@ const readline = { createInterface }.createInterface({
   output: process.stdout,
 });
 readline.question("Choose a port number:", (port) => {
-  config.port = port;
+  portt = port;
   function e() {
     readline.question("Do you want to add a module(y/n):", (yn) => {
       if (yn === "y") {
@@ -46,7 +46,7 @@ readline.question("Choose a port number:", (port) => {
   const dir = process.argv[3] || process.cwd();
   fs.writeFileSync(
     path.join(dir, "1host.config.js"),
-    `module.exports={port:${config.port},modules:${modules}}`,
+    `module.exports={port:${portt},modules:${modules}}`,
     {}
   );
 });
