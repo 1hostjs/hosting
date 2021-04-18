@@ -15,10 +15,10 @@ t(`Commands:
   >> args: directory: changes the directory
   >> usage: 1host config < directory (optional) >
 `);
-t("1host.js Config")
-t("Answer the prompts below")
-t("Choose a port number:")
-t("Do you want to add a module(y/n):")
-t("Path to the module")
-t("Is it an error handler? (y/n):")
-t("Do you want do add another(y/n):")
+t("1host.js Config");
+t("Answer the prompts below");
+t("Choose a port number:");
+t("Do you want to add a module(y/n):");
+t("Path to the module");
+t("Is it an error handler? (y/n):");
+t("Do you want do add another(y/n):");
