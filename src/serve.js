@@ -1,5 +1,4 @@
-const consola = require("consola");
-module.exports = (modules, port) => {
+module.exports = (moduless, port) => {
   const http = require("http");
   const fs = require("fs");
   console.log("Serving");
@@ -31,17 +30,18 @@ module.exports = (modules, port) => {
           return type;
         };
         try {
-          for (module of modules) {
+          for (module of moduless) {
             module.module(req, res);
           }
-          if (content == "") modules.errorHandler.module(req, res, 404);
+          if (content == "") moduless.errorHandler.module(req, res, 404);
           console.log("Type:" + type);
           res.setHeader("Content-Type", type);
           res.write(content);
 
           res.end();
-        } catch {
-          modules.errorHandler.module(req, res, 500);
+        } catch (err) {
+          console.error(err);
+          moduless.errorHandler.module(req, res, 500);
           res.write(content);
         }
       })
@@ -49,7 +49,7 @@ module.exports = (modules, port) => {
       .listen(usePort);
   }
   try {
-    start();
+    start(port);
   } catch (err) {
     if (err.code == "EADDRINUSE") {
       start(0);

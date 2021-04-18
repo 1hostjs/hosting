@@ -1,9 +1,9 @@
-const wrapAnsi = require("wrap-ansi");
-const chalk = require("chalk");
-const boxen = require("boxen");
-const l10n = require("../localization/getstring");
-const osLocale = require("os-locale");
-const locale = osLocale.sync();
+import wrapAnsi from "wrap-ansi";
+import chalk from "chalk";
+import boxen from "boxen";
+import l10n from "../localization/getstring.mjs";
+import { sync } from "os-locale";
+const locale = sync();
 const maxCharsPerLine = () => ((process.stdout.columns || 100) * 80) / 100;
 
 function indent(count, chr = " ") {
@@ -31,14 +31,6 @@ function foldLines(
   charsPerLine = maxCharsPerLine()
 ) {
   return indentLines(wrapAnsi(string, charsPerLine), spaces, firstLineSpaces);
-}
-
-function colorize(text) {
-  return text
-    .replace(/\[[^ ]+]/g, (m) => chalk.grey(m))
-    .replace(/<[^ ]+>/g, (m) => chalk.green(m))
-    .replace(/ (-[-\w,]+)/g, (m) => chalk.bold(m))
-    .replace(/`([^`]+)`/g, (_, m) => chalk.bold.cyan(m));
 }
 
 function box(message, title, options) {
@@ -94,4 +86,4 @@ function fatalBox(message, title) {
     title || chalk.red(l10n("✖ 1host.js Fatal Error", locale))
   );
 }
-module.exports = { fatalBox, successBox, warningBox };
+export { fatalBox, successBox, warningBox };

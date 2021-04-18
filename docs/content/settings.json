@@ -1,5 +1,5 @@
 {
-  "title": "1host.js Docs",
+  "title": "Docs",
   "url": "https://wgytcraft.github.io/",
   "github": {
     "repo": "1hostjs/hosting",
@@ -10,9 +10,9 @@
   },
   "twitter": "wgytcraft",
   "colors": {
-    "primary": "#f63202"
+    "primary": "#ECC30B"
   },
-  "logo": "/icon.png",
+  "logo": "/logo.svg",
   "algolia": {
     "apiKey": "e9903a0e3c71984808c3c2268c9c7bb6",
     "indexName": "1host",

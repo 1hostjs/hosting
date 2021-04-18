@@ -1,5 +1,6 @@
-module.exports = (key, locale) => {
-  const { tx, t } = require("@transifex/native");
+import transifex from "@transifex/native";
+const { tx, t } = transifex;
+export default (key, locale) => {
   tx.init({
     token: "1/c885c73e0f89b3c7910d866455dbf5809465ca8e",
     sourceLocale: "en",
