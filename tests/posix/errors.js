@@ -15,7 +15,7 @@ module.exports = async (req, res, code, err) => {
       host: "1host.js selfhosted",
       timestamp: datadate,
       version: dataver,
-      err:err,
+      err: err,
     })
   );
 };
