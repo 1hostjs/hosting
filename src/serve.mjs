@@ -31,11 +31,11 @@ export default (mdls, port) => {
           return type;
         };
         try {
+          let module
           for (module of modules) {
             module.module(req, res);
           }
           if (content == "") modules.errorHandler.module(req, res, 404);
-          console.log("Type:" + type);
           res.setHeader("Content-Type", type);
           res.write(content);
           res.end();
