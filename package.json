@@ -2,7 +2,7 @@
   "name": "@1hostjs/hosting",
   "version": "2.0.0",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "repository": "https://github.com/1hostjs/1host-next.git",
   "author": "wgyt",
   "license": "MIT",
