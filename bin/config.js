@@ -10,7 +10,7 @@ var portt;
 var modules = [];
 formatting.successBox(l10n("Answer the prompts below", locale), title);
 console.warn(
-  "the cli ISN'T finished, modules save to your config file. You will need to manually configure your modules."
+  "the cli ISN'T finished, modules DON'T save to your config file. You will need to manually configure your modules."
 );
 console.log(
   formatting.successBox(l10n("Answer the prompts below", locale), title)
@@ -27,7 +27,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
       (yn) => {
         if (yn === "y") {
           var cfgmdle = {};
-          readline.question(l10n("Path to the module", locale), (str) => {
+          readline.question(l10n("Path to the module:", locale), (str) => {
             cfgmdle.module = str;
             readline.question(
               l10n("Is it an error handler? (y/n):", locale),
@@ -35,7 +35,10 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                 if (yn === "y") {
                   cfgmdle.errorHandler = true;
                 }
-                modules.push(cfgmdle);
+                console.warn(
+                  "You need to add the following to the config file:\n "
+                );
+                console.log(cfgmdle);
                 readline.question(
                   l10n("Do you want do add another(y/n):", locale),
                   (yn) => {
