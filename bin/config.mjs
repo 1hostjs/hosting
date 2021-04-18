@@ -2,6 +2,8 @@ import { createInterface } from "readline";
 import formatting from "../src/formatting.mjs";
 import l10n from "../localization/getstring.mjs";
 import osloc from "os-locale";
+import path from "path";
+import fs from "fs";
 const locale = osloc.sync();
 var title = l10n("1host.js Config", locale) || "1host.js Config";
 var config = {};
@@ -18,22 +20,25 @@ readline.question("Choose a port number:", (port) => {
   function e() {
     readline.question("Do you want to add a module(y/n):", (yn) => {
       if (yn === "y") {
+        // todo: add code here
       }
-      readline.question("Do you want to remove a module(y/n):", (yn) => {
-        if (yn === "y") {
-        }
-        readline.question(
-          "Do you want do anything else with modules(y/n):",
-          (yn) => {
-            if (yn === "y") {
-              e();
-            } else {
-              readline.close();
-            }
+      readline.question(
+        "Do you want do add another(y/n):",
+        (yn) => {
+          if (yn === "y") {
+            e();
+          } else {
+            readline.close();
           }
-        );
-      });
+        }
+      );
     });
   }
   e();
+  const dir = process.argv[3] || process.cwd();
+  fs.writeFileSync(
+    path.join(dir, "1host.config.js"),
+    `module.exports={port:${config.port},modules:${config.modules}}`,
+    {}
+  );
 });

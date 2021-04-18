@@ -6,7 +6,14 @@ var title = l10n("1host.js Help", locale) || "1host.js Help";
 console.log(
   formatting.successBox(
     l10n(
-      "Commands: \n start: starts 1host.js \n args: directory: changes the directory \n usage: 1host start < directory (optional) >",
+      `Commands:
+        > start: starts 1host.js
+          >> args: directory: changes the directory
+          >> usage: 1host start < directory (optional) >
+        > config: changes the config file
+          >> args: directory: changes the directory
+          >> usage: 1host config < directory (optional) >
+        `,
       locale
     ),
     title
