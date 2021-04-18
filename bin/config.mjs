@@ -27,13 +27,13 @@ readline.question("Choose a port number:", (port) => {
           (yn) => {
             if (yn === "y") {
               e();
-            }else{
-                readline.close()
+            } else {
+              readline.close();
             }
           }
         );
       });
     });
   }
-  e()
+  e();
 });
