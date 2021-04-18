@@ -11,7 +11,7 @@
     "chalk": "^4.1.0",
     "consola": "^2.15.3",
     "os-locale": "^5.0.0",
-    "wrap-ansi": "^7.0.0"
+    "wrap-ansi": "^8.0.0"
   },
   "bin": {
     "1host": "bin/1host.mjs"
