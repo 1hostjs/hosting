@@ -8,6 +8,8 @@ const locale = osloc.sync();
 var title = l10n("1host.js Config", locale);
 var portt;
 var modules = [];
+var cfgmdle = {};
+
 formatting.successBox(l10n("Answer the prompts below", locale), title);
 console.warn(
   l10n(
@@ -29,7 +31,6 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
       l10n("Do you want to add a module(y/n):", locale),
       (yn) => {
         if (yn === "y") {
-          var cfgmdle = {};
           readline.question(l10n("Path to the module:", locale), (str) => {
             cfgmdle.module = str;
             readline.question(
@@ -44,7 +45,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                     locale
                   )
                 );
-                console.log(cfgmdle);
+                modules.push(cfgmdle);
                 readline.question(
                   l10n("Do you want do add another(y/n):", locale),
                   (yn) => {
