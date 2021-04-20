@@ -29,10 +29,16 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
     const dir = process.argv[3] || process.cwd();
     fs.writeFileSync(
       path.join(dir, "1host.config.js"),
-      `module.exports={port:${portt}}`,
+      `module.exports={port:${portt},modules:[`,
       {}
     );
-    // todo: add for loop so we can write the variable modules to the config file
+    let module;
+    for (module in modules) {
+      let data = modules[module]
+      console.log(data);
+      fs.appendFileSync(path.join(dir, "1host.config.js"), data); // this throws an error, todo: fix this
+    }
+    fs.appendFileSync(path.join(dir, "1host.config.js"), "]}");
   }
   function e() {
     readline.question(
