@@ -34,7 +34,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
     );
     let module;
     for (module in modules) {
-      let data = modules[module]
+      let data = modules[module];
       console.log(data);
       fs.appendFileSync(path.join(dir, "1host.config.js"), data); // this throws an error, todo: fix this
     }
