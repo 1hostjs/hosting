@@ -9,7 +9,7 @@ module.exports = async (req, res, code, err) => {
   });
 
   res.end(
-    await ejs.renderFile("./error.ejs", {
+    await ejs.renderFile("/workspace/hosting/tests/posix/error.ejs", {
       errornumber: code,
       datanum: datanum,
       host: "1host.js selfhosted",
