@@ -25,7 +25,7 @@ const readline = { createInterface }.createInterface({
 });
 readline.question(l10n("Choose a port number:", locale), (port) => {
   portt = port;
-  function writedata(){
+  function writedata() {
     const dir = process.argv[3] || process.cwd();
     fs.writeFileSync(
       path.join(dir, "1host.config.js"),
@@ -61,7 +61,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                       e();
                     } else {
                       readline.close();
-                      writedata()
+                      writedata();
                     }
                   }
                 );
@@ -70,7 +70,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
           });
         } else {
           readline.close();
-          writedata()
+          writedata();
         }
       }
     );
