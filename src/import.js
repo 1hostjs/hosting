@@ -17,10 +17,10 @@ export default async (dir) => {
   }
   function https(cfg) {
     var array;
-    if(cfg.default.https.on){
-      array=[true,cfg.default.https.cert, cfg.default.https.key]
-    }else{
-      array=[false,null,null]
+    if (cfg.default.https.on) {
+      array = [true, cfg.default.https.cert, cfg.default.https.key];
+    } else {
+      array = [false, null, null];
     }
     return array;
   }
