@@ -22,7 +22,3 @@ t("Do you want to add a module(y/n):");
 t("Path to the module");
 t("Is it an error handler? (y/n):");
 t("Do you want do add another(y/n):");
-t(
-  "the cli ISN'T finished, modules DON'T save to your config file. You will need to manually configure your modules."
-);
-t("You need to add the following to the config file:\n ", locale);
