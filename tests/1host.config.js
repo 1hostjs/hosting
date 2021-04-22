@@ -3,11 +3,12 @@ module.exports = {
     {
       module: require("./test.js"),
       host: "google.google",
-      config: { go: true },
+      config: { dirname: __dirname },
     },
     {
       module: require("./errors.js"),
       errorHandler: true,
+      config: { dirname: __dirname },
     },
   ],
   port: 3000,
