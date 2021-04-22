@@ -9,4 +9,10 @@ module.exports = {
     },
   ],
   port: 3000,
+  https: {
+    on: false,
+    port: 3001,
+    cert: null,
+    key: null,
+  },
 };

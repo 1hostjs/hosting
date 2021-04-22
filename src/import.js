@@ -15,6 +15,16 @@ export default async (dir) => {
         modules.errorHandler = { module: require(module.module), data: module };
     }
   }
-  console.error([modules, config.default.port]);
-  return [modules, config.default.port];
+  var https;
+  if (config.default.https.on || false) {
+    https = [
+      true,
+      config.default.https.port,
+      config.default.https.cert,
+      config.default.https.key,
+    ];
+  } else {
+    https = [false, null, null, null];
+  }
+  return [modules, config.default.port, https];
 };

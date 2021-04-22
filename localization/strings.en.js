@@ -1,4 +1,4 @@
-const { t } = require("@transifex/native");
+import { t } from "@transifex/native";
 t("Starting...");
 t("Yikes, we ran into an error running your project\n");
 t("1host.js Message");
@@ -22,7 +22,7 @@ t("Do you want to add a module(y/n):");
 t("Path to the module");
 t("Is it an error handler? (y/n):");
 t("Do you want do add another(y/n):");
-t(
-  "the cli ISN'T finished, modules DON'T save to your config file. You will need to manually configure your modules."
-);
-t("You need to add the following to the config file:\n ", locale);
+t("Do you want to configure https support(y/n):");
+t("Path to the key:");
+t("Path to the cert:");
+t("Choose a port number for HTTPS:");

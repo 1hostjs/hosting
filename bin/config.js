@@ -9,13 +9,8 @@ var title = l10n("1host.js Config", locale);
 var portt;
 var modules = new Array();
 var cfgmdle = {};
+var https = {};
 formatting.successBox(l10n("Answer the prompts below", locale), title);
-console.warn(
-  l10n(
-    "the cli ISN'T finished, modules DON'T save to your config file. You will need to manually configure your modules.",
-    locale
-  )
-);
 console.log(
   formatting.successBox(l10n("Answer the prompts below", locale), title)
 );
@@ -35,13 +30,43 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
     let module;
     for (module in modules) {
       let data = modules[module];
-      console.log(data);
       fs.appendFileSync(
         path.join(dir, "1host.config.js"),
         `{"module":"${data.module}","errorHandler":${data.errorHandler}},`
       );
     }
-    fs.appendFileSync(path.join(dir, "1host.config.js"), "]}");
+    fs.appendFileSync(
+      path.join(dir, "1host.config.js"),
+      `],https:${JSON.stringify(https)},}`
+    );
+  }
+  function httpsdata() {
+    readline.question(
+      l10n("Do you want to configure https support(y/n):", locale),
+      (yn) => {
+        if (yn === "y") {
+          readline.question(
+            l10n("Choose a port number for HTTPS:", locale),
+            (port) => {
+              https.port = port;
+              readline.question(l10n("Path to the cert:", locale), (cert) => {
+                https.cert = cert;
+                readline.question(l10n("Path to the key:", locale), (key) => {
+                  https.key = key;
+                  readline.close();
+                  writedata();
+                });
+              });
+            }
+          );
+        } else {
+          https.on = false;
+          https.port = null;
+          readline.close();
+          writedata();
+        }
+      }
+    );
   }
   function e() {
     readline.question(
@@ -56,12 +81,6 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                 if (yn === "y") {
                   cfgmdle.errorHandler = true;
                 }
-                console.warn(
-                  l10n(
-                    "You need to add the following to the config file:\n ",
-                    locale
-                  )
-                );
                 modules.push(cfgmdle);
                 readline.question(
                   l10n("Do you want do add another(y/n):", locale),
@@ -69,8 +88,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                     if (yn === "y") {
                       e();
                     } else {
-                      readline.close();
-                      writedata();
+                      httpsdata();
                     }
                   }
                 );
@@ -78,8 +96,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
             );
           });
         } else {
-          readline.close();
-          writedata();
+          httpsdata();
         }
       }
     );
