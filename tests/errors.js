@@ -1,4 +1,5 @@
 const ejs = require("ejs");
+const path = require("path");
 module.exports = async (req, res, code, err, config) => {
   res.statusCode = code;
   var datanum = code;
@@ -9,7 +10,7 @@ module.exports = async (req, res, code, err, config) => {
   });
 
   res.write(
-    await ejs.renderFile("/workspace/hosting/tests/posix/error.ejs", {
+    await ejs.renderFile(path.join(config.path, "error.ejs"), {
       errornumber: code,
       datanum: datanum,
       host: "1host.js selfhosted",
