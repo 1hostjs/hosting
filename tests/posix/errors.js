@@ -8,7 +8,7 @@ module.exports = async (req, res, code, err) => {
     timeZone: "America/New_York",
   });
 
-  res.end(
+  res.write(
     await ejs.renderFile("/workspace/hosting/tests/posix/error.ejs", {
       errornumber: code,
       datanum: datanum,

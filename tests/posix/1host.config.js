@@ -2,6 +2,8 @@ module.exports = {
   modules: [
     {
       module: require("./test.js"),
+      host: "google.google",
+      config: { go: true },
     },
     {
       module: require("./errors.js"),

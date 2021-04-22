@@ -1,3 +1,4 @@
-module.exports = (req, res) => {
+module.exports = (req, res, config) => {
+  console.log(config);
   res.startFile("/workspace/hosting/tests/posix/index.html");
 };
