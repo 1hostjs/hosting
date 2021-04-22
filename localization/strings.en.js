@@ -1,4 +1,4 @@
-const { t } = require("@transifex/native");
+import { t } from "@transifex/native";
 t("Starting...");
 t("Yikes, we ran into an error running your project\n");
 t("1host.js Message");
