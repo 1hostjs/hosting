@@ -1,3 +1,3 @@
 tasks:
   - init: npm install && npm link
-    command: echo "Welcome to 1host.js on Gitpod! to test changes run npm link && cd tests/posix && 1host"
+    command: echo "Welcome to 1host.js on Gitpod! to test changes run npm test"
