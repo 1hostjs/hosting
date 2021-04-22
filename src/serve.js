@@ -32,15 +32,26 @@ export default (mdls, port, httpsdata) => {
     try {
       let module;
       for (module of modules) {
-        module.module(req, res);
+        if (module.data.config === undefined) {
+          module.data.config === null;
+        }
+        if (module.data.host == undefined) {
+          module.module(req, res, module.data.config);
+        }
+        if (host == module.data.host) {
+          module.module(req, res, module.data.config);
+        }
       }
-      if (content == "") modules.errorHandler.module(req, res, 404);
+      if (content == "") {
+        modules.errorHandler.module(req, res, 404, "empty config");
+        return true;
+      }
       res.setHeader("Content-Type", type);
       res.write(content);
-      res.end();
     } catch (err) {
       modules.errorHandler.module(req, res, 500, err);
     }
+    res.end();
   }
   function start(usePort = port, httpsdata = httpsdata) {
     http
