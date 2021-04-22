@@ -11,7 +11,7 @@ try {
   //o.err()
   var data = importmodules(dir, successBox, fatalBox, l10n, locale);
   var sdata = await data;
-  serve(sdata[0], sdata[1]);
+  serve(sdata[0], sdata[1], sdata[2]);
 } catch (err) {
   console.clear();
   console.log(
