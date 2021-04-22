@@ -30,7 +30,6 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
     let module;
     for (module in modules) {
       let data = modules[module];
-      console.log(data);
       fs.appendFileSync(
         path.join(dir, "1host.config.js"),
         `{"module":"${data.module}","errorHandler":${data.errorHandler}},`
@@ -38,7 +37,7 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
     }
     fs.appendFileSync(
       path.join(dir, "1host.config.js"),
-      `],${JSON.stringify(https)},}`
+      `],https:${JSON.stringify(https)},}`
     );
   }
   function httpsdata() {
@@ -46,11 +45,23 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
       l10n("Do you want to configure https support(y/n):", locale),
       (yn) => {
         if (yn === "y") {
-          // todo: ask for port
-          // todo: ask for key path
-          // todo: ask for cert path
+          readline.question(
+            l10n("Choose a port number for HTTPS:", locale),
+            (port) => {
+              https.port = port;
+              readline.question(l10n("Path to the cert:", locale), (cert) => {
+                https.cert = cert;
+                readline.question(l10n("Path to the key:", locale), (key) => {
+                  https.key = key;
+                  readline.close();
+                  writedata();
+                });
+              });
+            }
+          );
         } else {
           https.on = false;
+          https.port = null;
           readline.close();
           writedata();
         }
@@ -78,8 +89,6 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
                       e();
                     } else {
                       httpsdata();
-                      readline.close();
-                      writedata();
                     }
                   }
                 );
@@ -88,8 +97,6 @@ readline.question(l10n("Choose a port number:", locale), (port) => {
           });
         } else {
           httpsdata();
-          readline.close();
-          writedata();
         }
       }
     );
