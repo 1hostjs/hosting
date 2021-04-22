@@ -1,5 +1,5 @@
 const ejs = require("ejs");
-module.exports = async (req, res, code, err) => {
+module.exports = async (req, res, code, err, config) => {
   res.statusCode = code;
   var datanum = code;
   var dataver = "v2";
