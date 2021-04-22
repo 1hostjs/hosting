@@ -43,13 +43,13 @@ export default (mdls, port, httpsdata) => {
         }
       }
       if (content == "") {
-        modules.errorHandler.module(req, res, 404, "empty config");
+        modules.errorHandler.module(req, res, 404, "empty page", modules.errorHandler.data.config);
         return true;
       }
       res.setHeader("Content-Type", type);
       res.write(content);
     } catch (err) {
-      modules.errorHandler.module(req, res, 500, err);
+      modules.errorHandler.module(req, res, 500, err,modules.errorHandler.data.config);
     }
     res.end();
   }
