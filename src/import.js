@@ -16,7 +16,7 @@ export default async (dir) => {
     }
   }
   var https;
-  if (config.default.https.on) {
+  if (config.default.https.on||false) {
     https = [
       true,
       config.default.https.port,
