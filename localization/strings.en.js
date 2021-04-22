@@ -22,7 +22,7 @@ t("Do you want to add a module(y/n):");
 t("Path to the module");
 t("Is it an error handler? (y/n):");
 t("Do you want do add another(y/n):");
-t("Do you want to configure https support(y/n):")
-t("Path to the key:")
-t("Path to the cert:")
+t("Do you want to configure https support(y/n):");
+t("Path to the key:");
+t("Path to the cert:");
 t("Choose a port number for HTTPS:");
