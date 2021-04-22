@@ -18,13 +18,10 @@ Add 1host by adding a new script in package.json
 }
 ```
 
-Create a 1host.config.js
+Create a 1host.config.js by running:
 
-```js
-module.exports = {
-  modules: [],
-  port: 3000,
-};
+```
+1host config
 ```
 
 _More info can be found on [the docs](https://1host.js.org/installation/)._
