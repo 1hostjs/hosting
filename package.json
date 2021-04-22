@@ -35,7 +35,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "lint": "prettier --write \"**/*.**\"",
+    "lint": "npx prettier --write \"**/*.**\"",
     "trans": "txjs-cli push --purge \"localization/strings.en.js\""
   }
 }
