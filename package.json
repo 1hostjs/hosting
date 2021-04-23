@@ -37,6 +37,6 @@
   "scripts": {
     "lint": "npx prettier --write \"**/*.**\"",
     "trans": "txjs-cli push --purge \"localization/strings.en.js\"",
-    "test": "npm link && git submodule init && git submodule update && cd test && npm ci && 1host start"
+    "test": "npm link && git submodule init && git submodule update && cd test && npm ci && 1host help && 1host start"
   }
 }
