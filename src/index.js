@@ -1,8 +1,8 @@
 import { successBox, fatalBox } from "./formatting.js";
 import consola from "consola";
 import path from "path";
-const l10nn = await import(path.join('..','localization','getstring.js'));
-const l10n = l10nn.default
+const l10nn = await import(path.join("..", "localization", "getstring.js"));
+const l10n = l10nn.default;
 import osloc from "os-locale";
 import importmodules from "./import.js";
 import serve from "./serve.js";
