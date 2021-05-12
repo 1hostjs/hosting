@@ -462,9 +462,9 @@
       }
     },
     "@transifex/native": {
-      "version": "0.12.1",
-      "resolved": "https://registry.npmjs.org/@transifex/native/-/native-0.12.1.tgz",
-      "integrity": "sha512-ZDaXGJs1smh40aBnRyI5lWckcYrJkQl4S/uf7l/aepZluZdQtW1JC4H7I9eQ+Epb+yz7Oadze6L4xbIqjblZ1A==",
+      "version": "0.12.2",
+      "resolved": "https://registry.npmjs.org/@transifex/native/-/native-0.12.2.tgz",
+      "integrity": "sha512-f8V69Oo/xsOzHpLssC8EArH2QY4VcLRTmRCIWsbPDfWJTJGtfL328CR9ClHlrJd1eJqMHE5z+BO+xtogQHD5jQ==",
       "requires": {
         "axios": "^0.21.1",
         "md5": "^2.3.0",

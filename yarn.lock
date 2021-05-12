@@ -205,9 +205,9 @@
     shelljs "^0.8.4"
 
 "@transifex/native@^0.12.1":
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-0.12.1.tgz#c0ce593349637a3280c5a270356652cb63cdd21e"
-  integrity sha512-ZDaXGJs1smh40aBnRyI5lWckcYrJkQl4S/uf7l/aepZluZdQtW1JC4H7I9eQ+Epb+yz7Oadze6L4xbIqjblZ1A==
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-0.12.2.tgz#2afdf91a84e03977ec6265a083f7591c045db6fa"
+  integrity sha512-f8V69Oo/xsOzHpLssC8EArH2QY4VcLRTmRCIWsbPDfWJTJGtfL328CR9ClHlrJd1eJqMHE5z+BO+xtogQHD5jQ==
   dependencies:
     axios "^0.21.1"
     md5 "^2.3.0"
