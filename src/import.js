@@ -30,11 +30,11 @@ export default async (dir) => {
   } else {
     https = [false, null, null, null];
   }
-  var skip
-  if (config.default.skip404 || false){
-    skip = false
-  }else{
-    skip = true
+  var skip;
+  if (config.default.skip404 || false) {
+    skip = false;
+  } else {
+    skip = true;
   }
   return [modules, config.default.port, https, skip];
 };
