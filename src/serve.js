@@ -50,7 +50,7 @@ export default (mdls, port, httpsdata, skip404) => {
           }
         }
       }
-      if (content == ""&&skip404) {
+      if (content == "" && skip404) {
         throw "empty page";
       }
       res.setHeader("Content-Type", type);
