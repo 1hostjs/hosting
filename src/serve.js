@@ -2,7 +2,7 @@ import consola from "consola";
 import http from "http";
 import https from "https";
 import fs from "fs";
-export default (mdls, port, httpsdata) => {
+export default (mdls, port, httpsdata, skip404) => {
   const modules = mdls;
   console.log("Serving");
   function serverfunction(req, res) {
@@ -50,7 +50,7 @@ export default (mdls, port, httpsdata) => {
           }
         }
       }
-      if (content == "") {
+      if (content == "" && skip404) {
         throw "empty page";
       }
       res.setHeader("Content-Type", type);
