@@ -1,6 +1,6 @@
 {
   "name": "@1hostjs/hosting",
-  "version": "2.1.2",
+  "version": "2.3.0",
   "description": "Build multiple sites in one package with easy modules",
   "keywords": [
     "1host",
