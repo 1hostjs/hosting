@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "prettier": "^2.2.1",
-    "@transifex/cli": "^0.12.1"
+    "@transifex/cli": "^0.13.0"
   },
   "engines": {
     "node": ">=12"
