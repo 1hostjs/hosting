@@ -503,9 +503,9 @@
       "dev": true
     },
     "@transifex/cli": {
-      "version": "0.13.0",
-      "resolved": "https://registry.npmjs.org/@transifex/cli/-/cli-0.13.0.tgz",
-      "integrity": "sha512-EVZDCPXtXR6u1t09wHED4VrzAvJkeZBCA7MIvewZJr52u8Un4pVFRqvp08vPAtauVgKUThad4LX/O/cp3QlF/A==",
+      "version": "0.13.1",
+      "resolved": "https://registry.npmjs.org/@transifex/cli/-/cli-0.13.1.tgz",
+      "integrity": "sha512-ppfhpcrAPqqsI4qRwlIiuAbwNRAmdTOM5x2qUsQLgKZlqxSw8wW8HEQL/8vYcijD2Rq/Ql14ElR6u9ax/9B+xA==",
       "dev": true,
       "requires": {
         "@babel/parser": "^7.13.10",
@@ -514,7 +514,7 @@
         "@oclif/config": "^1.17.0",
         "@oclif/errors": "^1.3.4",
         "@oclif/plugin-help": "^3.2.1",
-        "@transifex/native": "^0.13.0",
+        "@transifex/native": "^0.13.1",
         "angular-html-parser": "^1.7.1",
         "axios": "^0.21.1",
         "cli-ux": "^5.5.1",
@@ -525,9 +525,9 @@
       },
       "dependencies": {
         "@transifex/native": {
-          "version": "0.13.0",
-          "resolved": "https://registry.npmjs.org/@transifex/native/-/native-0.13.0.tgz",
-          "integrity": "sha512-TmyE966ndt+YuBKPpoflml8SdJLhS72RzlKSW9TjMAKIEh8cFICjOw71MAT0bilR7Yhw2i8+kf/A2SmMrkGtJg==",
+          "version": "0.13.1",
+          "resolved": "https://registry.npmjs.org/@transifex/native/-/native-0.13.1.tgz",
+          "integrity": "sha512-YyFkLk+woZ2zcDUvaCaBmwiO+NQpCcRrUr2v1mS7qgEXCT8mCLXtHW1vFaY+wS0N0nbH3pfGuty/3be/3Assyw==",
           "dev": true,
           "requires": {
             "@messageformat/core": "^3.0.0",
