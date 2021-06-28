@@ -240,7 +240,7 @@
     lodash "^4.17.21"
     shelljs "^0.8.4"
 
-"@transifex/native@^0.13.1":
+"@transifex/native@^0.13.0", "@transifex/native@^0.13.1":
   version "0.13.1"
   resolved "https://registry.yarnpkg.com/@transifex/native/-/native-0.13.1.tgz#93a8caab69c84b2dc0cb69aab234e0cfae59acee"
   integrity sha512-YyFkLk+woZ2zcDUvaCaBmwiO+NQpCcRrUr2v1mS7qgEXCT8mCLXtHW1vFaY+wS0N0nbH3pfGuty/3be/3Assyw==
@@ -1046,9 +1046,9 @@ picomatch@^2.2.1, picomatch@^2.2.3:
   integrity sha512-KpELjfwcCDUb9PeigTs2mBJzXUPzAuP2oPcA989He8Rte0+YUAjw1JVedDhuTKPkHjSYzMN3npC9luThGYEKdg==
 
 prettier@^2.2.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.1.tgz#76903c3f8c4449bc9ac597acefa24dc5ad4cbea6"
-  integrity sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
+  integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
 
 pump@^3.0.0:
   version "3.0.0"
