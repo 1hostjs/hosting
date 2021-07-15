@@ -240,15 +240,6 @@
     lodash "^4.17.21"
     shelljs "^0.8.4"
 
-"@transifex/native@^0.13.0":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-0.13.1.tgz#93a8caab69c84b2dc0cb69aab234e0cfae59acee"
-  integrity sha512-YyFkLk+woZ2zcDUvaCaBmwiO+NQpCcRrUr2v1mS7qgEXCT8mCLXtHW1vFaY+wS0N0nbH3pfGuty/3be/3Assyw==
-  dependencies:
-    "@messageformat/core" "^3.0.0"
-    axios "^0.21.1"
-    md5 "^2.3.0"
-
 "@transifex/native@^0.14.1":
   version "0.14.1"
   resolved "https://registry.yarnpkg.com/@transifex/native/-/native-0.14.1.tgz#22e181284fd1234325494d20c74ee0a07b8729b9"

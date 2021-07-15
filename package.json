@@ -20,7 +20,7 @@
   "type": "module",
   "repository": "https://github.com/1hostjs/hosting.git",
   "dependencies": {
-    "@transifex/native": "^0.13.0",
+    "@transifex/native": "^0.14.1",
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
     "consola": "^2.15.3",
