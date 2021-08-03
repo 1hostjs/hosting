@@ -4,7 +4,7 @@ import boxen from "boxen";
 import path from "path";
 const l10nn = await import(path.join("..", "localization", "getstring.js"));
 const l10n = l10nn.default;
-import {osLocaleSync} from 'os-locale';
+import { osLocaleSync } from "os-locale";
 const locale = osLocaleSync();
 const maxCharsPerLine = () => ((process.stdout.columns || 100) * 80) / 100;
 function indent(count, chr = " ") {
