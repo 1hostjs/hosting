@@ -52,22 +52,14 @@ function box(message, title, options) {
   );
 }
 function successBox(message, title) {
-  return box(
-    message,
-    title || chalk.green(l10n("✔ 1host Success", locale)),
-    {
-      borderColor: "green",
-    }
-  );
+  return box(message, title || chalk.green(l10n("✔ 1host Success", locale)), {
+    borderColor: "green",
+  });
 }
 function warningBox(message, title) {
-  return box(
-    message,
-    title || chalk.yellow(l10n("⚠ 1host Warning", locale)),
-    {
-      borderColor: "yellow",
-    }
-  );
+  return box(message, title || chalk.yellow(l10n("⚠ 1host Warning", locale)), {
+    borderColor: "yellow",
+  });
 }
 function errorBox(message, title) {
   return box(message, title || chalk.red(l10n("✖ 1host Error", locale)), {
