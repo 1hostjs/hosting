@@ -16,9 +16,6 @@ jobs:
     - name: Build
       if: steps.cache-modules.outputs.cache-hit != 'true'
       run: npm install
-    - name: Test
-      run: npm_config_yes=true npx best-test@latest
-
     - name: Publish
       uses: mikeal/merge-release@master
       env:
