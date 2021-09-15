@@ -221,9 +221,9 @@
   integrity sha512-60CHpq+eqnTxLZQ4PGHYNwUX572hgpMHGPtTWMjdTMsAvlm69lZV/4ly6O3sAYkomo4NggGcomrDpBe34rxUqw==
 
 "@transifex/cli@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@transifex/cli/-/cli-1.0.0.tgz#e38597fd379477d7cc9fa099ba9b78dc6ff3a094"
-  integrity sha512-74lFoQxjFERQEvQfym11HFRCi/VuaHloG+VaIqv1TyGSqn+1lJY2xWq/YK0F/veqHTib+QKAFFLlBfTF/DQ8IA==
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@transifex/cli/-/cli-1.0.1.tgz#5f4b80a1503209c56bb70153e6c936ca76da08a6"
+  integrity sha512-bJPPL0KwcoFZ/fKdsH1blDqMe4rJPkZHQ3UvNlqiPPJ5PUiBy2AAdr3lSdsg9ePwev3MOtn8JYiLZ5AV//tKIQ==
   dependencies:
     "@babel/parser" "^7.13.10"
     "@babel/traverse" "^7.13.0"
@@ -231,7 +231,7 @@
     "@oclif/config" "^1.17.0"
     "@oclif/errors" "^1.3.4"
     "@oclif/plugin-help" "^3.2.1"
-    "@transifex/native" "^1.0.0"
+    "@transifex/native" "^1.0.1"
     angular-html-parser "^1.7.1"
     axios "^0.21.1"
     cli-ux "^5.5.1"
@@ -240,10 +240,10 @@
     lodash "^4.17.21"
     shelljs "^0.8.4"
 
-"@transifex/native@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-1.0.0.tgz#53a965a5b7a9645e129e7c4470130c5dec47fee7"
-  integrity sha512-0vtVIvB13gKyT4T99f67VW6/pifdvBJf5ofcXlKAEMGjCEf1yZkbSfPzP6y7V0nMcYpfU11SOE/2rhYDZScMYQ==
+"@transifex/native@^1.0.0", "@transifex/native@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-1.0.1.tgz#9a3f471eaca1561071046c3a87afa16019153b66"
+  integrity sha512-N8zhk3IDLNZ89J/nknl6+vBrs31k4wkCsKb2kcW/ELVQVQlXBmhHiq3duNyp7nnq0MQm5+qoF6/McRCg2pyLRQ==
   dependencies:
     "@messageformat/core" "^3.0.0"
     axios "^0.21.1"
