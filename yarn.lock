@@ -241,9 +241,9 @@
     shelljs "^0.8.4"
 
 "@transifex/native@^1.0.0", "@transifex/native@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-1.0.1.tgz#9a3f471eaca1561071046c3a87afa16019153b66"
-  integrity sha512-N8zhk3IDLNZ89J/nknl6+vBrs31k4wkCsKb2kcW/ELVQVQlXBmhHiq3duNyp7nnq0MQm5+qoF6/McRCg2pyLRQ==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@transifex/native/-/native-1.0.4.tgz#84ac785f26d9f7109e88624939519abdfb8ce7e6"
+  integrity sha512-vU5B/I1bi308w2ljs2NgAqQ/2sLYylfRH8+uEMB/CpNhIstsAfbKZKOXJoy9IrZqNXksjeFTjc6aU+67cg81uQ==
   dependencies:
     "@messageformat/core" "^3.0.0"
     axios "^0.21.1"

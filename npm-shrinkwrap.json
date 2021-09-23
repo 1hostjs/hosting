@@ -538,9 +538,9 @@
       }
     },
     "@transifex/native": {
-      "version": "1.0.1",
-      "resolved": "https://registry.npmjs.org/@transifex/native/-/native-1.0.1.tgz",
-      "integrity": "sha512-N8zhk3IDLNZ89J/nknl6+vBrs31k4wkCsKb2kcW/ELVQVQlXBmhHiq3duNyp7nnq0MQm5+qoF6/McRCg2pyLRQ==",
+      "version": "1.0.4",
+      "resolved": "https://registry.npmjs.org/@transifex/native/-/native-1.0.4.tgz",
+      "integrity": "sha512-vU5B/I1bi308w2ljs2NgAqQ/2sLYylfRH8+uEMB/CpNhIstsAfbKZKOXJoy9IrZqNXksjeFTjc6aU+67cg81uQ==",
       "requires": {
         "@messageformat/core": "^3.0.0",
         "axios": "^0.21.1",
